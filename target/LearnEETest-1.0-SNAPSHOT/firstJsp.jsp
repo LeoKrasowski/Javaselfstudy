@@ -17,6 +17,13 @@
             java.util.Date now = new java.util.Date();
             String someString = "Current date : " + now;
         %>
+        <%@ page import="java.util.Date, logic.TestClass" %>
+
+        <% TestClass testClass = new TestClass(); %>
+
+        <%=
+            testClass.getInfo()
+        %>
         <%= someString %>
     </p>
     <p>
@@ -24,6 +31,11 @@
             for (int i = 0; i < 10; i++) {
                 out.println("<p>" + "Hello : " + i + "</p>");
             }
+        %>
+        <%@ page import ="java.util.Date" %>
+
+        <%
+
         %>
     </p>
 </body>
