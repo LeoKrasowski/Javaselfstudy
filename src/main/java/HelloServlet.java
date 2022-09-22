@@ -6,10 +6,12 @@ import java.io.PrintWriter;
 public class HelloServlet extends javax.servlet.http.HttpServlet {
     @Override
     protected void doGet(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws ServletException, IOException {
+        String name = request.getParameter("name");
+        String surname = request.getParameter("surname");
         PrintWriter pw = response.getWriter();
 
         pw.println("<html>");
-        pw.println("<h1> Hello world </h1>");
+        pw.println("<h1> Hello, "+ name + " " + surname + " </h1>");
         pw.println("</html>");
     }
 
