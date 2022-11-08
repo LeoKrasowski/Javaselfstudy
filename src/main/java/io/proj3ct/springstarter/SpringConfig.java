@@ -16,7 +16,7 @@ public class SpringConfig {
     public Car getCar(){
         return new Car();
     }
-
+//hghgvgjhhkj cv
     @Bean("carWithModelValue")
     public Car getCarWithModel(@Value("${car.model}") String model){
         return new Car(model);
